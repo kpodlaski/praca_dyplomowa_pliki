@@ -4,7 +4,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\message{... [wfiisul.cls] ---  (KP@WFiIS UL)  v0.0 <June 2019>  ...}
+\message{... [wfiisul.cls] ---  (KP@WFiIS UL)  v0.1 <June 2019>  ...}
 
 \newif\ifpdflatex\pdflatexfalse
 \NeedsTeXFormat{LaTeX2e} %
@@ -27,7 +27,7 @@
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 
-\geometry{lmargin=35mm, rmargin=25mm, tmargin=12.5mm, bmargin=1.25mm, foot=10mm, head=10mm}
+\geometry{lmargin=25mm, rmargin=25mm, tmargin=20mm, bmargin=20mm, foot=15mm, head=15mm, bindingoffset=10mm}
 
 \def\autor#1   {\gdef\@autor{#1}}
 \def\tytul#1   {\gdef\@tytul{#1}}
@@ -59,7 +59,7 @@
 
 
 \vspace{1.8cm}
-{\Large \bfseries \@autor }\\[0.4cm] % tytuł pracy
+{\Large \bfseries \@autor }\\[0.4cm]
 
 \addvspace{1.5cm}
 
