@@ -90,14 +90,14 @@
 \item Część pisemna pracy inżynierskiej może być tworzona w dowolnej technologii (word, latex, openoffice, ...), proszę o przesyłanie do mnie wersji pdf. Osobiście polecam latex ale jest to tylko sugestia :-).
 \item W trakcie pracy nad treścią pracy nie poprawiam tekstu, jedynie dodaję komentarze do dokumentu pdf.
 \item Proszę o założenie na potrzeby projektu repozytorium git/bitbucket, abym miał dostęp do aktualnej wersji kodu programistycznego.  Repozytorium może być publiczne lub prywatne, w przypadku prywatnego proszę o dodanie mnie do tego repozytorium.
-\item W trakcie pracy nad projektem inżynierskim proszę pamiętać o tym co nauczyliście się w trakcie przedmiotu inżynieria oprogramowania. Nie wymagam pracy w modelu kaskadowym (waterfall). Pewnie wygodniejsza jest jedna z metodyk iteracyjnych, zwinnych. Jednakże, każda z~nich wymaga co najmniej aby każda z poniższych faz występowała co najmniej jednokrotnie:
+\item W trakcie pracy nad projektem inżynierskim proszę pamiętać o tym co nauczyliście się w trakcie przedmiotu inżynieria oprogramowania. Nie wymagam pracy w modelu kaskadowym (waterfall). Pewnie wygodniejsza jest jedna z metodyk iteracyjnych, zwinnych. Jednakże, każda z~nich wymaga aby każda z poniższych faz występowała co najmniej jednokrotnie:
     \begin{itemize}
     \item analizy wymagań,
     \item projektowania,
     \item implementacji,
     \item testowania.
     \end{itemize}
-    W przypadku stosowania modelu iteracyjnego często każda z faz występuje kilkukrotnie. Wymienione fazy muszą/powinny mieć swoje odzwierciedlenie w części pisemnej pracy inżynierskiej.
+    W przypadku stosowania modelu iteracyjnego często fazy występują kilkukrotnie. Wymienione fazy muszą/powinny mieć swoje odzwierciedlenie w części pisemnej pracy inżynierskiej. Z mojego punktu widzenia bardzo ważne są dwie pierwsze oraz ostatnia z faz, one odzwierciedlają profesjonalizm dyplomanta. Jakość pracy wykonanej w trakcie implementacji świadczy o kompetencjach technologicznych.
 \item Programistyczna praca inżynierska wymaga dobrej dokumentacji projektu (patrz Sekcja \ref{dokumentacja}).
 \item Zalecam tworzenie bibliografii w miarę pisania pracy. Podejście ``dodam później'', niestety stosowane, zwykle wychodzi bokiem.
 \item To samo dotyczy formatowania, w przypadku korzystania z word bądź openoffice zalecam od samego początku wykorzystywać odpowiednie style, aby można było później łatwo zmieniać format całego dokumentu. Zostawianie tego na sam koniec powoduje często problemy i ``rozjeżdżanie się'' pracy.
@@ -112,7 +112,7 @@ Praca powinna być napisana poprawnie w języku polskim. Proszę zwrócić uwag�
   \item[Poprawnie:] Na potrzeby pracy w celu stworzenia usług typu \underline{REST} wykorzystano \underline{framework} Spring.
 \end{description}
 
-Dodatkowo sugeruję stosowanie twardych spacji w celu unikania wszelkiego rodzaju sierotek, dodatkowo przed ostatecznym wysłaniem do APD proszę o sprawdzenie czy nie występują  bękarty, sierotki, wdowy i szewcy \cite{Bekart}.
+Dodatkowo sugeruję stosowanie twardych spacji w celu unikania wszelkiego rodzaju sierotek, przed ostatecznym wysłaniem pracy do APD proszę o sprawdzenie czy nie występują  bękarty, sierotki, wdowy i szewcy \cite{Bekart}.
 
 \subsection{Rozdziały}
 Nie ma ogólnych założeń co do podziału logicznego pracy, przykładowy podział pracy na rozdziały poświęcone kolejnym zagadnieniom:
@@ -151,15 +151,13 @@ Praca powinna zawierać analizę wymagań aplikacji, każda forma stosowana w~in
 Bardzo często aplikacja/system tworzony w ramach pracy inżynierskiej składa się z wielu elementów jak np. baza danych, aplikacja serwerowa, aplikacja kliencka (mobilna). W pracy należy wyraźnie przedstawić podział na elementy składowe i metodę komunikacji pomiędzy nimi. Zalecanym sposobem przedstawienia zależności pomiędzy częściami projektu, oprócz opisu słownego, jest stosowanie schematów.
 
 \subsection{Dokumentacja kodu}
- Poprawnym sposobem dokumentacji struktury klas jest diagram klas. Możemy stosować różnego rodzaju diagramy, bardzo ogólny reprezentujący strukturę całej aplikacji Rys.~\ref{duzy_diagram_klas}, jak i diagramy opisujące poszczególne pakiety Rys.~\ref{diagram_klas_pakiet} bądź pojedyncze klasy Rys.~\ref{diagram_wybranej_klasy}. Do diagramów klas należy dołączyć bardziej szczegółowy opis klasy, informujący użytkownika za co klasa odpowiada, jakie są jej pola, metody i ich parametry, w tym celu można wykorzystać postać tabelaryczną (Tab.~\ref{Opis_Klasy}) lub przedstawić opis w tekście pracy. W~przypadku prac zawierających znaczną ilość klas i ich metod nie wymagam aby wszystkie metody/pola zostały opisane w pracy. W~części  pisemnej należy opisać jedynie najistotniejsze metody/pola, dodatkowo należy stworzyć dokumentację techniczną klas za pomocą odpowiedniego narzędzia (doxygen, javadoc, ...) i~dodać do pracy w postaci załącznika w formie elektronicznej.
+ Poprawnym sposobem dokumentacji struktury klas jest diagram klas. Możemy stosować różnego rodzaju diagramy, bardzo ogólny reprezentujący strukturę całej aplikacji Rys.~\ref{duzy_diagram_klas}, jak i diagramy opisujące poszczególne pakiety Rys.~\ref{diagram_klas_pakiet} bądź pojedyncze klasy Rys.~\ref{diagram_wybranej_klasy}. Do diagramów klas należy dołączyć bardziej szczegółowy opis klasy, informujący użytkownika za co klasa odpowiada, jakie są jej pola, metody i ich parametry, w tym celu można wykorzystać postać tabelaryczną (Tab.~\ref{Opis_Klasy}) lub przedstawić opis w tekście pracy. W~przypadku prac zawierających znaczną ilość klas i ich metod nie wymagam aby wszystkie metody/pola zostały opisane w pracy. W~części  pisemnej należy opisać jedynie najistotniejsze metody/pola, dodatkowo należy stworzyć dokumentację techniczną klas za pomocą odpowiedniego narzędzia (doxygen, javadoc, ...) i~dodać do pracy w postaci załącznika w formie elektronicznej (na płycie CD/DVD).
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width = 200pt]{DiagramKlasy.jpg}
 \caption{Przykładowy diagram opisujący jedną klasę.}\label{diagram_wybranej_klasy}
 \end{figure}
-
-
 
 \begin{table}[!h]
 \begin{center}
@@ -187,9 +185,13 @@ Bardzo często aplikacja/system tworzony w ramach pracy inżynierskiej składa s
 \end{center}
 \end{table}
 
+
+
 Działanie aplikacji, kodu aplikacji, powinno zostać zaprezentowane z wykorzystaniem diagramów UML\cite{UML}: sekwencji (Sequence diagram), aktywności (Activity diagram), stanu (State diagram) bądź schematów blokowych.  Jeżeli autor pracy uzna, że fragment kodu jest niezbędny, należy zastosować krótki jego fragment (do 10-20 linijek kodu). Proszę o unikanie wklejania do dokumentu fragmentów kodu źródłowego aplikacji. Dodatkowo nie zalecam używania w tym celu zrzutów ekranu z środowiska programistycznego, powoduje to często różne rozmiary czcionek w zależności od rozmiaru wyciętego fragmentu. Dodatkowo kod powinien być kolorowany na białym tle, nie należy stosować motywów typu kolorowy tekst na czarnym tle - wygląda to dużo gorzej na papierze i zużywa mnóstwo tonera, tuszu. Mile widziana jest numeracja linii co ułatwia późniejsze odnoszenie się do przedstawionego kodu źródłowego. Kolorystyka i obramowanie kodu nie musi przypominać tego umieszczonego w dokumencie (Kod~źr.~1), jednakże kod źródłowy musi się wyraźnie odróżniać od reszty tekstu pracy.
 
 \jsfile[label=kod1]{code3.js}{Kod źródłowy obiektu app}
+
+
 
 \subsection{Dokumentacja baz danych}
 Praca musi zawierać informację o strukturze wykorzystywanych baz danych. W przypadku stosowania baz relacyjnych zaleca się postać diagramów opisujących tabele i relacje pomiędzy nimi, w natomiast przypadku baz obiektowych diagramy obiektów.
