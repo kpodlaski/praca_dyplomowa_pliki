@@ -4,7 +4,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\message{... [wfiisul.cls] ---  (KP@WFiIS UL)  v0.1 <June 2019>  ...}
+\message{... [wfiisul.cls] ---  (KP@WFiIS UL)  v0.2 <June 2019>  ...}
 
 \newif\ifpdflatex\pdflatexfalse
 \NeedsTeXFormat{LaTeX2e} %
@@ -23,7 +23,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{tocloft}
 \RequirePackage{cite}
-\RequirePackage[all,defaultlines=2]{nowidow} % Kontrola sierot i wdów - działa lepiej
+\RequirePackage[all,defaultlines=2]{nowidow} % Kontrola  wdów - działa lepiej
 \RequirePackage[polish]{babel}
 \RequirePackage{polski}
 

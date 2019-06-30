@@ -24,8 +24,9 @@
 \usepackage{framed}
 \usepackage{listings}
 \usepackage[most]{tcolorbox}
+\usepackage{hyphenat}
 
-
+\hyphenation{pra-cy}
 
 \begin{document}
 
@@ -68,7 +69,7 @@
 
 Poniższy dokument jest przykładowym zastosowaniem szablonu .cls pracy dyplomowej na Wydziale Fizyki i Informatyki Stosowanej UŁ. Każdy rozdział pracy może dzielić się na sekcje i pod-sekcje. Spis treści budowany jest z wykorzystaniem elementów : {\textbackslash}chapter, {\textbackslash}section i {\textbackslash}subsection. Szablon zakłada wydruk dwustronicowy, z tego powodu każdy nowy rozdział rozpoczyna się na stronie nieparzystej.
 
-Praca musi być przygotowana zgodnie z Procedurą dyplomowania przyjętą na Wydziale Fizyki i Informatyki Stosowaniej Uniwersytetu Łódzkiego \cite{Procedura_dyplomowania}.
+Praca musi być przygotowana zgodnie z Procedurą dyplomowania przyjętą na Wydziale Fizyki i Informatyki Stosowanej Uniwersytetu Łódzkiego \cite{Procedura_dyplomowania}.
 \section{System \LaTeX}
 Można znaleźć wiele źródeł na temat systemu \LaTeX \cite{latex_wiki}.
 
@@ -79,7 +80,7 @@ Zasady wykorzystania stylu wfisul.cls, na początku pliku należy wykorzystać k
 \documentclass{wfiisul}
 \end{lstlisting}
 
-Na początku dokumentu należy zdefiniować wszystkie predefiniowane parametry pracy, nie zapominając odpowiednim  uzupełnieniu danych jak tytuł pracy, imie nazwisko autora, nr albumu itp.. Należy pamiętać o elementach związanych z kierunkiem czy typem pracy.
+Na początku dokumentu należy zdefiniować wszystkie predefiniowane parametry wykorzystywanego stylu, nie zapominając odpowiednim  uzupełnieniu danych jak tytuł pracy, imie nazwisko autora, nr albumu itp.. Należy pamiętać o elementach związanych z kierunkiem czy typem pracy.
 
 \begin{lstlisting}[language=TeX, basicstyle=\ttfamily, , mathescape=true]
 \begin{document}
@@ -139,7 +140,7 @@ Po wypełnieniu wszystkich niezbędnych parametrów pracy należy wydać instruk
 \section{Spacje i znaki interpunkcyjne}
 System latex sam radzi sobie ze wielokrotnymi spacjami, jednakże nie należy ich stosować w tekście. Nowy akapit oznacza się jedną pustą linią w dokumencie .tex. 
 
-Znaki interpunkcyjne takie jak przecinek (,), kropka (.), dwukropek (:), średnik (;), znak zapytania (?), wykrzyknik (!), zamknięcie dowolnego nawiasu (]\})>), zamknięcie cudzysłowu ('' lub ') nie mogą być nigdy poprzedzone spacją. Bezpośrednio po wymienionych znakach może wystąpić wyłącznie spacja, znak nowego akapitu lub inny znak interpunkcyjny. Po znakach otwierających dowolnego nawiasu ([\{(<) lub otwarcia cudzysłowu (`` lub `) nigdy nie należy używać spacji. Spację używamy przed tymi znakami. Nie należy rozpoczynać akapitu od spacji – przerwa ta jest dodawana  automatycznie przez system latex.
+Znaki interpunkcyjne takie jak przecinek (,), kropka (.), dwukropek (:), średnik (;), znak zapytania (?), wykrzyknik (!), zamknięcie dowolnego nawiasu (]\})>), zamknięcie cudzysłowu ('' lub ') nie mogą być nigdy poprzedzone spacją. Bezpośrednio po wymienionych znakach może wystąpić wyłącznie spacja, znak nowego akapitu lub inny znak interpunkcyjny. Po znakach otwierających dowolnego nawiasu ([\{(<) lub otwarcia cudzysłowu (,, lub `) nigdy nie należy używać spacji. Spację używamy przed tymi znakami. Nie należy rozpoczynać akapitu od spacji – przerwa ta jest dodawana  automatycznie przez system latex.
 
 Dodatkowo sugeruje się stosowanie twardych spacji w celu unikania wszelkiego rodzaju sierotek, przed ostatecznym wysłaniem pracy do APD należy sprawdzić czy nie występują  bękarty, sierotki, wdowy i szewcy \cite{Bekart}.
 
@@ -156,10 +157,10 @@ W(1) = \begin{bmatrix}
        \end{bmatrix}.
 \end{equation}
 
-Należy pamiętać iż do numerowanych wzorów odnosimy się za pomocą środowisk {\textbackslash}label i {\textbackslash}eqref. Dla przykładu wzór \eqref{eq:wn} opisuje wielowymiarową transformatę Walsha z wykorzystaniem transformaty jednowymiarowej \eqref{eq:wn}.
+Należy pamiętać iż do numerowanych wzorów odnosimy się za pomocą środowisk {\textbackslash}label i {\textbackslash}eqref. Dla przykładu wzór \eqref{eq:wn} opisuje wielowymiarową transformatę Walsha z~wykorzystaniem transformaty jednowymiarowej \eqref{eq:wn}.
 
-\subsection{Skomplikowane wzory matematyczne}
-W celu uzyskania bardziej skomplikowanych wzorów, np łamania wzorów wieloliniowych zaleca sie wykorzystanie biblioteki \textit{amsmath} a w szczególności \textit{align, gather, multline, \dots}, bardziej szczegółowe opisy można znaleźć w \cite{latex_math_wiki}.
+\subsection{Zaawansowane wzory matematyczne}
+W celu uzyskania bardziej skomplikowanych wzorów, np wymagających łamania wzorów wieloliniowych zaleca sie wykorzystanie biblioteki \textit{amsmath} a w szczególności \textit{align, gather, multline, \dots}, bardziej szczegółowe opisy można znaleźć w \cite{latex_math_wiki}.
 
 \section{Elementy pływające}
 Każdy element pływający jak: obrazek, schemat, tabela czy fragment z~kodem źródłowym powinien zostać odpowiednio oznaczony (ponumerowany) i~zatytułowany. W~pracy powinno znaleźć się co najmniej jedno odwołanie do wspomnianego elementu, w~innym wypadku sprawia to wrażenie, iż element jest zbędny. Przykładowe odniesienie do obrazków oraz tabel oznaczamy za pomocą {\textbackslash}ref, dla przykładu na Rysunku \ref{diagram_wybranej_klasy} przedstawiono diagram klasy a Tabela \ref{rest1} zawiera opis elementu API typu REST. Dodatkowo należy pamiętać, iż zasady umieszczania elementów pływających w~tekście ograniczają znacząco jaką część strony mogą zawierać, a~co za tym idzie omawiana tabelka, obrazek nie muszą znajdować się w~bezpośrednim sąsiedztwie tekstu odnoszącego się do obiektu.
@@ -199,7 +200,7 @@ Response Data & obiekt w postaci:\\
 Cytowania należy oznaczać wykorzystując {\textbackslash}cite. Wielokrotne cytowania należy grupować \cite{Bekart, Cytowanie, latex_math_wiki, Procedura_dyplomowania} W pracy należy stosować jeden z trzech systemów cytowań (Vancouver System, Harvard System, Oxford System) opisanych szczegółowo w \cite{Cytowanie}, regulamin dyplomowania zaleca wykorzystanie systemu \underline{Vancouver}. W~przypadku systemów Vancouver i Oxford bibliografia powinna być posortowana w kolejności pojawiania się odwołań w tekście, natomiast w systemie Harvard alfabetycznie wedle nazwisk pierwszych autorów.
 
 \section{Spisy}
-Praca musi zawierać spis treści {\textbackslash}tableofcontents oraz spis bibliograficzny, można również dodać spis rysunków  {\textbackslash}listoftables i spis tabel {\textbackslash}listoffigures. 
+Styl pracy umieszcza spis treści na początku pracy. Praca musi zawierać spis bibliograficzny na końcu, wcześniej można również dodać spis rysunków  {\textbackslash}listoftables i spis tabel {\textbackslash}listoffigures. Wspomniane spisy zostaną automatycznie dodane do spisu treści.
 
 \listoftables
 \listoffigures
@@ -214,40 +215,5 @@ Praca musi zawierać spis treści {\textbackslash}tableofcontents oraz spis bibl
 \bibitem{Cytowanie} Strona Wikipedii poświęcona metodom cytowania \\
 \url{https://pl.wikipedia.org/wiki/Cytowanie_pi%C5%9Bmiennictwa}
 
-
-\bibitem{1}	A. De Vos, Reversible Computing: Fundamentals, Quantum Computing, and Applications. Weinheim: Wiley-VCH Verlag, Berlin (2010)
-\bibitem{2}	M. Saeedi and I. L. Markov, ``Synthesis and Optimization of Reversible Circuits: A Survey,'' ACM Computing Surveys, vol. 45, no. 2, pp. 21:1-34, 2013
-\bibitem{3}	M. Soeken, R. Wille, O. Keszocze, D. M. Miller, and R. Drechsler, ``Embedding of Large Boolean Functions for Reversible Logic,'' J. Emerg. Technol. Comput. Syst., vol. 12, no. 4, article 41, 26 pages, December 2015; also available as preprint arXiv.org:1408.3586, August 15, 2014
-\bibitem{4}	C. Carlet, ``Vectorial Boolean Functions for Cryptography,'' in: Y. Crama and P. Hammer (Eds,), Boolean Models and Methods in Mathematics, Computer Science, and Engineering, pp. 398-472 Cambridge University Press, 2010
-\bibitem{5}	N. Tokareva, Bent Functions. Results and Applications to Cryptography,'' Academic Press, London 2015
-\bibitem{6}	P. Kerntopf, C. Moraga, K. Podlaski, and R. Stankovic, ``Towards Classification of Reversible Functions,'' In: Steinbach, B. (Ed.), Proceedings of the 12th International Workshop on Boolean Problems, September 2016, pp. 21-28
-\bibitem{7}	P. Kerntopf, C. Moraga, K. Podlaski, and R. Stankovic, ``Towards Classification of Reversible Functions with Homogeneous Component Functions,'' In: Steinbach, B. (Ed.), Further Improvements in the Boolean Domain. Newcastle upon Tyne: Cambridge Scholars Publishing, 2018, pp. 386-406
-\bibitem{8}	P. Kerntopf, K. Podlaski, C. Moraga, and R. Stankovic, ``Study of Reversible Ternary Functions with Homogeneous Component Functions,'' In: Proceedings of the 47th IEEE International Conference on Multiple-Valued Logic, May 2017, pp. 191-196
-\bibitem{9}	P. Kerntopf, R. Stankovic, K. Podlaski, and C. Moraga, ``Ternary/MV Reversible Functions with Component Functions from Different Equivalence Classes,'' In: Proceedings of the 48th IEEE International Conference on Multiple-Valued Logic, May 2018, pp. 109-114
-\bibitem{10}	P. Kerntopf, K. Podlaski, C. Moraga, and R. Stankovic, ``New Results on Reversible Boolean Functions Having Component Functions with Specified Properties,'' In: Soeken, M. (Ed.), Proceedings of the 13th International Workshop on Boolean Problems, September 2018, pp. 151-166
-\bibitem{11}	C.-C. Tsai and M. Marek-Sadowska, ``Boolean Functions Classification via Fixed Polarity Reed-Muller Forms,'' IEEE Transactions on Computers, vol. 46, no. 2, pp. 173-186, February 1997
-\bibitem{12}	D. Debnath and T. Sasao, ``Fast Boolean Matching under Variable Permutation Using Representative,'' Proceedings of the Asia and South Pacific Design Automation Conference, January 1999, pp. 359-362
-\bibitem{13}	D. Debnath and T. Sasao, ``Efficient Computation of Canonical Form for Boolean Matching in Large Libraries,'' Proceedings of the Asia and South Pacific Design Automation Conference, January 2004, pp. 591-596
-\bibitem{14}	D. Debnath and T. Sasao, ``Fast Boolean Matching under Permutation by Efficient Computation of Canonical Form,'' IEICE Transactions on Fundamentals of Electronics, vol. E87-A, December 2004, pp. 3134-3140
-\bibitem{15}	D. Debnath and T. Sasao, ``Efficient Computation of Canonical Form under Variable Permutation and Negation for Boolean Matching in Large Libraries,'' IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences, vol. E89-A, No.12, December 2006, Special Section on VLSI Design and CAD Algorithms, pp. 3443-3450
-\bibitem{16}	R. S. Stanković, J. T. Astola, and B. Steinbach, ``Former and Recent Work in Classification of Switching Functions,'' in: Steinbach, B. (Ed.), Proceedings of the 8th International Workshop on Boolean Problems, September 2008, pp. 115-126
-\bibitem{17}	C. S. Lorens, ``Invertible Boolean Functions,'' Space-General Corp., El Monte, CA, Re-search Memorandum No. 21; January 25, 1962 and July 1, 1962
-\bibitem{18}	C. S. Lorens, ``Invertible Boolean Functions,'' IEEE Transactions on Electronic Computers, vol. EC-13, no. 5, pp. 529-541, October 1964
-\bibitem{19}	M. A. Harrison, ``The Number of Classes of Invertible Boolean Functions,'' Journal of ACM, vol. 10, pp. 25-28, 1963
-\bibitem{20}	I. E. Strazdins, ``On the Number of Types of Invertible Binary Networks,'' Avtomatika \& Vychislitelnaya Tekhnika, no. 1, pp. 30-34, 1974
-\bibitem{21}	E. A. Primenko, ``Invertible Boolean Functions and Fundamental Groups of Transformations of Algebras of Boolean Functions,'' Avtomatika \& Vychislitelnaya Tekhnika, no. 3, pp. 17-21, 1976
-\bibitem{22}	E. A. Primenko, ``On the Number of Types of Invertible Boolean Functions,'' Avtomatika \& Vychislitelnaya Tekhnika, no. 6, pp. 12-14, 1977
-\bibitem{23}	E. A. Primenko, ``On the Number of Types of Invertible Transformations in Multivalued Logic,'' Kibernetika, no. 5, pp. 27-29, 1977
-\bibitem{24}	E. A. Primenko, ``Equivalence Classes of Invertible Boolean Functions,'' Kibernetika, no. 6, pp. 1-5, 1984
-\bibitem{25}	J. E. Rice, ``Considerations for Determining a~Classification Scheme for Reversible Boolean Functions,'' Technical Report TR-CSJR2-2007, University of Lethbridge, Department of Mathematics and Computer Science, Lethbridge, Alberta, Canada, 2007
-\bibitem{26}	M. Soeken, N. Abdessaied, and G. De Micheli: ``Enumeration of Reversible Functions and Its Application to Circuit Complexity,'' In: S. Devitt, I. Lanese (Eds.), Reversible Computation. Proceedings of the 8th International Conference, RC 2016, Bologna, Italy, July 7–8, 2016, Lecture Notes in Computer Science, vol. 9720, pp. 255-270, Springer International Publishing AG Switzerland, 2016
-\bibitem{27}	T. G. Draper, ``Nonlinear Complexity of Boolean Permutations'' Ph.D. thesis, University of Maryland, 2009
-\bibitem{28}	S. Aaronson, D. Grier, and L. Schaeffer, ``The Classification of Reversible Bit Operations,'' Preprint arXiv:1504.05155 [quant-ph], 68 pages, April 20, 2015
-\bibitem{29}	M. Caric and M. Zivkovic, ``On the Number of Equivalence Classes of Invertible Boolean Functions under Action of Permutation of Variables on Domain and Range,'' Publications de l'Institut Mathématique, vol. 100, no. 114, 2016, pp. 95–99, also available as preprint arXiv:1603.04386v2 [math.CO], 9 pages, April 6, 2016
-%\bibitem{30}	R. E. Bryant, ``On the Complexity of VLSI Implementations and Graph Representations of Boolean Functions with Application to Integer Multiplication,'' IEEE Transactions on Computers, vol. 40, no. 2, pp. 205-213, 1991
-%\bibitem{31}	B. Bollig, M. Löbbing, M. Sauerhoff, and I. Wegener, ``On the Complexity of the Hidden Weighted Bit Function for Various BDD Models,'' Informatique Theorique et Applications, vol. 33, pp. 103-116, 1999
-%\bibitem{32}	D. Maslov, Personal communication, July 2016
-\bibitem{33}	J. Jegier, P. Kerntopf, and M. Szyprowski, ``An Approach to Constructing Reversible Multi-Qubit Benchmarks with Provably Minimal Implementations,'' In: Proceedings of the 13th IEEE International Conference on Nanotechnology, pp. 99-104, 2013
-\bibitem{34}	J. Jegier, P. Kerntopf, ``Progress Towards Constructing Sequences of Benchmarks for Quantum Boolean Circuits Synthesis,'' In: Proceedings of the 14th IEEE International Conference on Nanotechnology, pp. 250-255, 2014
 
 \end{document}
