@@ -22,7 +22,10 @@
 \RequirePackage{url}
 \RequirePackage{titlesec}
 \RequirePackage{tocloft}
+\RequirePackage{cite}
 \RequirePackage[all,defaultlines=2]{nowidow} % Kontrola sierot i wdów - działa lepiej
+\RequirePackage[polish]{babel}
+\RequirePackage{polski}
 
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
