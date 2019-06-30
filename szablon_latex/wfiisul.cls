@@ -29,6 +29,7 @@
 
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
+\usepackage{ifthen}
 
 \geometry{lmargin=25mm, rmargin=25mm, tmargin=20mm, bmargin=20mm, foot=15mm, head=15mm, bindingoffset=10mm}
 
@@ -42,6 +43,7 @@
 \def\kierunek#1 {\gdef\@kierunek{#1}}
 \def\specjalnosc#1 {\gdef\@specjalnosc{#1}}
 \def\specjalizacja#1 {\gdef\@specjalizacja{#1}}
+\def\sciezka#1 {\gdef\@sciezka{#1}}
 \def\nralbumu#1 {\gdef\@nralbumu{#1}}
 
 \linespread{1.2}
@@ -68,9 +70,14 @@
 
 \begin{flushleft}
 Kierunek: \@kierunek\\
-Specjalność:  \@specjalnosc \\
-Specjalizacja: \@specjalizacja\\
+%% Specjalnośći tylko na informatyce
+\ifthenelse{\equal{\@kierunek}{informatyka}}{Specjalność:  \@specjalnosc \\}{}
+%% Specjalizacja tylko informatyka inżynierska
+\ifthenelse{\equal{\@typpracy}{inżynierska}\AND\equal{\@kierunek}{informatyka}}{Specjalizacja: \@specjalizacja\\}{}
+%% Ścieżki fizyka oraz informatyka magisterska
+\ifthenelse{\equal{\@kierunek}{fizyka}\OR\equal{\@typpracy}{magisterska}}{Ścieżka dydaktyczna: \@sciezka\\}{}
 Numer albumu: \@nralbumu \\
+
 \end{flushleft}
 
 \vspace*{0.6cm}
@@ -98,7 +105,7 @@ WFiIS UŁ
 \end{minipage}
 \end{flushright}
 
-\vfill
+\vspace{\fill}
 {\large Łódź \the\year}\\[4cm] % Date
 \end{center}
 
@@ -110,7 +117,10 @@ WFiIS UŁ
 %    \newpage
 %}
 
-\clearpage
+
+\cleardoublepage
 
 
 \pagestyle{fancy}
+%\fancyhead[LE,LO]{\chaptername~\thechapter.~\chaptermark }
+\fancyhead[LE,RO]{}

@@ -1,4 +1,4 @@
-\documentclass[twoside]{wfiisul}
+\documentclass{wfiisul}
 %
 
 \usepackage[utf8]{inputenc}
@@ -21,20 +21,45 @@
 %\usepackage{wrapfig}
 %\usepackage[table]{xcolor}
 
+\usepackage{framed}
+\usepackage{listings}
+\usepackage[most]{tcolorbox}
+
+
+
 \begin{document}
 
 \tytul{Tytuł Pracy Dyplomowej }
 
-\typpracy{inżynierska}
-
 \autor{Imie Nazwisko}
 \nralbumu{****}
-\kierunek{informatyka}
-\specjalnosc{informatyka stosowana}
-\specjalizacja{****}
 
 \promotor{***}
 \katedra{****}
+
+\kierunek{informatyka}
+%\kierunek{fizyka}
+
+%% JEŚLI INFORMATYKA
+\specjalnosc{informatyka stosowana}
+%% DLA PRAC INŻYNIERSKICH
+\typpracy{inżynierska}
+\specjalizacja{****}
+
+%% DLA PRAC MAGISTERSKICH
+%\typpracy{magisterska}
+%\sciezka{***}
+
+%% JEŚLI FIZYKA
+%% DLA PRAC LICENCJACKICH
+%\typpracy{licencjacka}
+%\sciezka{***}
+
+%% DLA PRAC MAGISTERSKICH
+%\typpracy{magisterska}
+%\sciezka{***}
+
+
 
 \stronatytulowa
 
@@ -46,6 +71,68 @@ Poniższy dokument jest przykładowym zastosowaniem szablonu .cls pracy dyplomow
 Praca musi być przygotowana zgodnie z Procedurą dyplomowania przyjętą na Wydziale Fizyki i Informatyki Stosowaniej Uniwersytetu Łódzkiego \cite{Procedura_dyplomowania}.
 \section{System \LaTeX}
 Można znaleźć wiele źródeł na temat systemu \LaTeX \cite{latex_wiki}.
+
+\section{Wykorzystanie stylu pracy dyplomowej}
+Zasady wykorzystania stylu wfisul.cls, na początku pliku należy wykorzystać klasę wfiisul, plik cls musi być dostępny w trakcie kompilacji. Źródła .tex niniejszego dokumentu zawierają wszystkie niezbędne elementy dla prac inżynierskich z informatyki, elementy dla innych typów prac zostały zakomentowane, w celu wykorzystanie wystarczy odpowiednia modyfikacja źródła pliku. 
+
+\begin{lstlisting}[language=TeX, basicstyle=\ttfamily]
+\documentclass{wfiisul}
+\end{lstlisting}
+
+Na początku dokumentu należy zdefiniować wszystkie predefiniowane parametry pracy, nie zapominając odpowiednim  uzupełnieniu danych jak tytuł pracy, imie nazwisko autora, nr albumu itp.. Należy pamiętać o elementach związanych z kierunkiem czy typem pracy.
+
+\begin{lstlisting}[language=TeX, basicstyle=\ttfamily, , mathescape=true]
+\begin{document}
+\tytul{Tytu$\text{ł}$ pracy dyplomowej}
+\autor{Imie Nazwisko}
+\nralbumu{****}
+\promotor{***}
+\katedra{****}
+\end{lstlisting}
+
+Następnie zdefiniować elementy odpowiednie dla kierunku i typu pracy dyplomowej
+
+\subsection{Kierunek fizyka}
+
+\subsubsection{Praca licencjacka}
+\begin{lstlisting}[language=TeX, basicstyle=\ttfamily]
+\kierunek{fizyka}
+\typpracy{licencjacka}
+\sciezka{***}
+\end{lstlisting}
+
+\subsubsection{Praca magisterska}
+\begin{lstlisting}[language=TeX, basicstyle=\ttfamily]
+\kierunek{fizyka}
+\typpracy{magisterska}
+\sciezka{***}
+\end{lstlisting}
+
+\subsection{Kierunek informatyka}
+\subsubsection{Praca inżynierska}
+\begin{lstlisting}[language=TeX, basicstyle=\ttfamily, mathescape=true]
+\kierunek{informatyka}
+\specjalnosc{informatyka stosowana}
+\typpracy{in$\text{ż}$ynierska}
+\specjalizacja{****}
+\end{lstlisting}
+
+\subsubsection{Praca magisterska}
+\begin{lstlisting}[language=TeX, basicstyle=\ttfamily]
+\kierunek{informatyka}
+\specjalnosc{informatyka stosowana}
+\typpracy{magisterska}
+\sciezka{****}
+\end{lstlisting}
+
+\subsection{Utworzenie strony tytułowej}
+
+Po wypełnieniu wszystkich niezbędnych parametrów pracy należy wydać instrukcję  dodania strony tytułowej:
+
+\begin{lstlisting}[language=TeX, basicstyle=\ttfamily, inputencoding=utf8, extendedchars=false]
+\stronatytulowa
+\end{lstlisting}
+
 
 \chapter{Język pracy}
 
@@ -111,10 +198,14 @@ Response Data & obiekt w postaci:\\
 \section{Cytowania}
 Cytowania należy oznaczać wykorzystując {\textbackslash}cite. Wielokrotne cytowania należy grupować \cite{Bekart, Cytowanie, latex_math_wiki, Procedura_dyplomowania} W pracy należy stosować jeden z trzech systemów cytowań (Vancouver System, Harvard System, Oxford System) opisanych szczegółowo w \cite{Cytowanie}, regulamin dyplomowania zaleca wykorzystanie systemu \underline{Vancouver}. W~przypadku systemów Vancouver i Oxford bibliografia powinna być posortowana w kolejności pojawiania się odwołań w tekście, natomiast w systemie Harvard alfabetycznie wedle nazwisk pierwszych autorów.
 
+\section{Spisy}
+Praca musi zawierać spis treści {\textbackslash}tableofcontents, można również dodać spis rysunków  {\textbackslash}listoftables i spis tabel 
+{\textbackslash}listoffigures
+
 \clearpage
 \tableofcontents
-%\listoftables
-%\listoffigures
+\listoftables
+\listoffigures
 
 \thebibliography{99}
 \bibitem{Procedura_dyplomowania} Procedura dyplomowania na WFiIS UŁ:
