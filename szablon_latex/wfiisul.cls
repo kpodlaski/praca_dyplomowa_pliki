@@ -30,6 +30,7 @@
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{ifthen}
+\usepackage{etoolbox}
 
 \geometry{lmargin=25mm, rmargin=25mm, tmargin=20mm, bmargin=20mm, foot=15mm, head=15mm, bindingoffset=10mm}
 
@@ -48,12 +49,26 @@
 
 \linespread{1.2}
 
-\def\thesisheaders{
-\fancyfoot[LE,RO]{\small \@autor\quad\textit{\@tytul}}
+%\def\thesisheaders{
+%\fancyfoot[LE,RO]{\small \@autor\quad\textit{\@tytul}}
+%}
+
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{} % except the center
+\fancyhead[RE]{\thepage}    %numer strony
+\fancyhead[L]{\slshape \leftmark} % Rozdział
 }
 
-
 \newcommand{\stronatytulowa}{%
+
+\pagestyle{empty}
 
 \newpage \titlepage
 \begin{center}
@@ -99,8 +114,8 @@ Numer albumu: \@nralbumu \\
 \begin{flushleft} \large
 wykonana\,pod\,kierunkiem\\
 \@promotor\\
-W\,Katedrze\,\@katedra\\
-WFiIS UŁ
+W~Katedrze~\@katedra\\
+WFiIS~UŁ
 \end{flushleft}
 \end{minipage}
 \end{flushright}
@@ -108,19 +123,32 @@ WFiIS UŁ
 \vspace{\fill}
 {\large Łódź \the\year}\\[4cm] % Date
 \end{center}
+\cleardoublepage
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\tableofcontents
+\cleardoublepage
+\pagestyle{fancy}
+%\fancyhead[LE]{\slshape \rightmark} % Sekcja
+\fancyhead[RE]{\thepage}    %numer strony
+\fancyhead[LE, RO]{\slshape \leftmark} % Rozdział
+\fancyhead[LO]{\thepage}    %numer strony
+\fancyfoot[C]{}
+
+
+
+\newbool{firstbib}
+\booltrue{firstbib}
+\newbool{firstspis}
+\booltrue{firstspis}
+%Ustawienie stylu bibliografii i dodanie bibliografi do spisu treści
+\preto{\bibitem}{\ifbool{firstbib}{\thispagestyle{fancy}\addcontentsline{toc}{chapter}{\bibname} \setbool{firstbib}{false}}{}}
+%Ustawienie stylu dla spisów tabel i rysunków
+%Dodanie spisu rysunków so spisu treści
+\preto{\listoffigures}{\ifbool{firstspis}{\clearpage\setbool{firstspis}{false}}{}\addcontentsline{toc}{chapter}{\listfigurename}}
+%Dodanie spisu tabel so spisu treści
+\preto{\listoftables}{\ifbool{firstspis}{\clearpage\setbool{firstspis}{false}}{}\addcontentsline{toc}{chapter}{\listtablename}}
 
 }
 
-%\newcommand\blankpage{%
-%    \null
-%    \thispagestyle{empty}%
-%    \newpage
-%}
 
-
-\cleardoublepage
-
-
-\pagestyle{fancy}
-%\fancyhead[LE,LO]{\chaptername~\thechapter.~\chaptermark }
-\fancyhead[LE,RO]{}
+%Pusta strona
