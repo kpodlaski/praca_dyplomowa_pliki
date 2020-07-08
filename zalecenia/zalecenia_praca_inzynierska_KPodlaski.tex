@@ -138,7 +138,7 @@ Każdy element pływający jak: obrazek, schemat, tabela czy fragment z~kodem ź
 \section{Dokumentacja Projektu}\label{dokumentacja}
 
 \subsection{Wymagania aplikacji}
-Praca powinna zawierać analizę wymagań aplikacji, każda forma stosowana w~inżynierii oprogramowania jest odpowiednia \cite{IO}, dodatkowo do opisu założeń aplikacji należało by wykorzystać przypadki użycia (Use Cases) \cite{UML}.
+Praca powinna zawierać analizę wymagań aplikacji, każda forma stosowana w~inżynierii oprogramowania jest odpowiednia \cite{IO}, dodatkowo do opisu założeń aplikacji należało by wykorzystać przypadki użycia (Use Cases) \cite{UML}. Do tworzenia diagramów można wykorzystać dowolne narzędzia, wiele środowisk posiada odpowiednie narzędzia. Praktycznie każdy rodzaj diagramu UML można stworzyć za pomocą  prostego środowiska PlantUML \cite{plantUML}.
 
 \begin{figure}[h]
 \centering
@@ -153,13 +153,8 @@ Bardzo często aplikacja/system tworzony w ramach pracy inżynierskiej składa s
 \subsection{Dokumentacja kodu}
  Poprawnym sposobem dokumentacji struktury klas jest diagram klas. Możemy stosować różnego rodzaju diagramy, bardzo ogólny reprezentujący strukturę całej aplikacji Rys.~\ref{duzy_diagram_klas}, jak i diagramy opisujące poszczególne pakiety Rys.~\ref{diagram_klas_pakiet} bądź pojedyncze klasy Rys.~\ref{diagram_wybranej_klasy}. Do diagramów klas należy dołączyć bardziej szczegółowy opis klasy, informujący użytkownika za co klasa odpowiada, jakie są jej pola, metody i ich parametry, w tym celu można wykorzystać postać tabelaryczną (Tab.~\ref{Opis_Klasy}) lub przedstawić opis w tekście pracy. W~przypadku prac zawierających znaczną ilość klas i ich metod nie wymagam aby wszystkie metody/pola zostały opisane w pracy. W~części  pisemnej należy opisać jedynie najistotniejsze metody/pola, dodatkowo należy stworzyć dokumentację techniczną klas za pomocą odpowiedniego narzędzia (doxygen, javadoc, ...) i~dodać do pracy w postaci załącznika w formie elektronicznej (na płycie CD/DVD).
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width = 200pt]{DiagramKlasy.jpg}
-\caption{Przykładowy diagram opisujący jedną klasę.}\label{diagram_wybranej_klasy}
-\end{figure}
 
-\begin{table}[!h]
+\begin{table}[h!b]
 \begin{center}
 \begin{tabularx}{\textwidth}{|l|X|}
   \hline
@@ -185,6 +180,11 @@ Bardzo często aplikacja/system tworzony w ramach pracy inżynierskiej składa s
 \end{center}
 \end{table}
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width = 200pt]{DiagramKlasy.jpg}
+\caption{Przykładowy diagram opisujący jedną klasę.}\label{diagram_wybranej_klasy}
+\end{figure}
 
 
 Działanie aplikacji, kodu aplikacji, powinno zostać zaprezentowane z wykorzystaniem diagramów UML\cite{UML}: sekwencji (Sequence diagram), aktywności (Activity diagram), stanu (State diagram) bądź schematów blokowych.  Jeżeli autor pracy uzna, że fragment kodu jest niezbędny, należy zastosować krótki jego fragment (do 10-20 linijek kodu). Proszę o unikanie wklejania do dokumentu fragmentów kodu źródłowego aplikacji. Dodatkowo nie zalecam używania w tym celu zrzutów ekranu z środowiska programistycznego, powoduje to często różne rozmiary czcionek w zależności od rozmiaru wyciętego fragmentu. Dodatkowo kod powinien być kolorowany na białym tle, nie należy stosować motywów typu kolorowy tekst na czarnym tle - wygląda to dużo gorzej na papierze i zużywa mnóstwo tonera, tuszu. Mile widziana jest numeracja linii co ułatwia późniejsze odnoszenie się do przedstawionego kodu źródłowego. Kolorystyka i obramowanie kodu nie musi przypominać tego umieszczonego w dokumencie (Kod~źr.~1), jednakże kod źródłowy musi się wyraźnie odróżniać od reszty tekstu pracy.
@@ -214,7 +214,7 @@ Praca musi zawierać informację o strukturze wykorzystywanych baz danych. W prz
 \subsection{Protokoły wymiany informacji}
 Jeżeli aplikacja zakłada wymianę danych pomiędzy elementami systemu, lub aplikacjami zewnętrznymi np z wykorzystaniem SOAP lub REST, należy opisać dokładnie protokół wymiany informacji, dla przykładu opis protokołu REST zawierają Tabele~\ref{rest1},~\ref{rest2}.
 
-\begin{table}
+\begin{table}[th]
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
 &\textbf{Pobranie wybranego rekordu}\\\hline
@@ -281,6 +281,31 @@ Dokumentacja interfejsu użytkownika powinna pokazywać przepływ pomiędzy wido
 Na potrzeby pracy należy wykonać testy manualne i/lub automatyczne. Mile widziane jest zastosowanie testów jednostkowych, interfejsu użytkownika czy akceptacyjnych. Testy należy opisać w postaci: wyszczególnionych przypadków testowych, każdy przypadek testowy powinien zawierać opis sposobu wykonania, kroków niezbędnych do jego przeprowadzenia.
 
 
+\section{Egzamin dyplomowy -- obrona}
+
+Komisja egzaminacyjna składa się z trzech osób, przewodniczącego, recenzenta oraz opiekuna pracy. Egzamin składa się z dwu elementów prezentacji efektów pracy dyplomowej oraz faktycznego egzaminu.
+
+\subsection{Prezentacja efektów pracy dyplomowej}
+Dyplomant/dyplomantka jest zwykle proszony o prezentacje efektów pracy dyplomowej, w przypadku pracy inżynierskiej jest to zwykle aplikacja/system w przypadku prac magisterskich są to często efekty części badawczej. Student/studentka ma za zadanie w trakcie 5-10 minut zaprezentować najważniejsze elementy pracy.
+
+\begin{itemize}
+\item Część prezentacyjna może być wsparta prezentacją (ppt, pdf), zalecam taką formę wspomaga ona studenta/studentkę i zapobiega zgubieniu się pod wpływem stresu. W ramach potrzeb można przygotować krótki film wizualizujący działanie aplikacji, prezentacje aplikacji na żywo zwiększają ryzyko problemów technicznych.
+
+\item Prezentacja powinna się skupić na najważniejszych efektach pracy. Proszę więc o unikanie prezentacji wszystkich szczegółów/ekranów aplikacji, lepiej skupić się na spisie funkcjonalności, można zaprezentować jeden/kilka ekranów w celu pokazania przyjętej formy interfejsu użytkownika.
+
+\item Przedstawiana praca dyplomowa jest z zakresu informatyki proszę więc skupić się na elementach informatycznych pracy -- ale nie chodzi tu o elementy techniczne a fundamentalne jak stosowane algorytmy, struktury danych/klas natomiast nie jaka instrukcja pomogła w wykonaniu np. sortowania.
+
+\item W trakcie prezentacji proszę unikać sformułowań czysto slangowych bez wyjaśnienia ``JSON'', ``AJAX'', ``Spring Beans''. Pomimo iż jesteśmy informatykami proszę próbować prezentować z założeniem średniej specjalizacji słuchaczy w dziedzinie pracy dyplomowej.
+\end{itemize}
+
+\subsection{Część egzaminacyjna}
+
+Student/studentka dostaje trzy pytania, po jednym od każdego z członków komisji egzaminacyjnej. Przewidywany jest czas na przygotowanie do odpowiedzi, nie należy jednak z tym przesadzać normą jest max 5-7 minut przygotowania. Po zakończeniu przygotowania dyplomant/dyplomantka odpowiada na pytania w dowolnej kolejności. 
+
+W trakcie, jak i po zakończeniu, odpowiedzi na pytanie członkowie komisji mogą zadawać dodatkowe pytania uszczegóławiające lub wspomagające. Student przechodzi do następnego pytania po jawnej informacji, że komisja nie ma nic do dodania do aktualnego pytania.
+
+
+
 
 
 
@@ -299,6 +324,8 @@ Na potrzeby pracy należy wykonać testy manualne i/lub automatyczne. Mile widzi
 
 \bibitem{UML} Pascal Roques, UML in Practice: The Art of Modeling Software Systems Demonstrated through Worked Examples and Solutions, John Wiley \& Sons, 2004\\
     Przykładowy rozdział książki dotyczący wybranych diagramów UML i przypadków użycia \url{https://people.ok.ubc.ca/bowenhui/310/8-UML.pdf}
+    
+\bibitem{plantUML} Strona domowa projektu PlantUML \url{https://plantuml.com}
 
 
 
