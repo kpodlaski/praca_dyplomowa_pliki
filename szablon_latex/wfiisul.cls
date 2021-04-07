@@ -112,8 +112,8 @@ Numer albumu: \@nralbumu \\
 \end{minipage}
 
 \addvspace{5pt}
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
+\begin{minipage}{0.5\textwidth}
+\begin{flushleft}
 wykonana\,pod\,kierunkiem\\
 \@promotor\\
 W~Katedrze~\@katedra\\
