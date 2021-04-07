@@ -14,7 +14,7 @@
 \ProcessOptions\LoadClass[12pt,a4paper,twoside,openright]{report}
 
 \RequirePackage{times}
-\RequirePackage[T1]{fontenc}
+\RequirePackage[T1]{polski}
 \RequirePackage{graphicx}
 \RequirePackage{geometry}
 \RequirePackage{color}
@@ -25,12 +25,14 @@
 \RequirePackage{cite}
 \RequirePackage[all,defaultlines=2]{nowidow} % Kontrola  wdów - działa lepiej
 \RequirePackage[polish]{babel}
-\RequirePackage{polski}
+% włączenie polskich znaków
+\usepackage{lmodern}
 
-\usepackage{polski}
+
 \usepackage[utf8]{inputenc}
 \usepackage{ifthen}
 \usepackage{etoolbox}
+
 
 \geometry{lmargin=25mm, rmargin=25mm, tmargin=20mm, bmargin=20mm, foot=15mm, head=15mm, bindingoffset=10mm}
 
