@@ -106,14 +106,17 @@ Praca powinna być napisana poprawnie w języku polskim. Proszę zwrócić uwag�
 
 Dodatkowo sugeruję stosowanie twardych spacji w celu unikania wszelkiego rodzaju sierotek, przed ostatecznym wysłaniem pracy do APD proszę o sprawdzenie czy nie występują  bękarty, sierotki, wdowy i szewcy \cite{Bekart}.
 
+\subsubsection*{Poprawność językowa}
+Dodatkowo proszę o zwrócenie szczególnej uwagi na stronę edycyjną pracy, ograniczenie do minimum błędów gramatycznych bądź ortograficznych. Oczywiście błędy są niedopuszczalne jednak się zdarzają. Zalecam więc wykorzystanie automatycznego sprawdzenia poprawności językowej. Poziom weryfikacji pisowni mocno zależy od środowiska \LaTeX. Na przykład można wykorzystać słowniki z środowiska OpenOffice (pl\_PL.aff oraz pl\_PL.dic) skopiować je  do katalogu {\tt MiKTeX/hunspell/dicts}, wtedy w wybranym edytorze można włączyć możliwość podkreślania błędów po ustawieniu polskiego słownika.
+
 \subsection{Rozdziały}
 Nie ma ogólnych założeń co do podziału logicznego pracy, przykładowy podział pracy na rozdziały poświęcone kolejnym zagadnieniom:
 \begin{enumerate}
 \item Wstęp - powinien zawierać ogólny opis celów pracy
-\item Podstawy teoretyczne, 
-\item Opis metod (algorytmy, założenia, warunki graniczne), 
+\item Podstawy teoretyczne,
+\item Opis metod (algorytmy, założenia, warunki graniczne),
 \item Opis technologii wykorzystanych w pracy,
-\item Opis implementacji 
+\item Opis implementacji
 \begin{itemize}
 \item Implementacja części algorytmicznej
 \item Dokumentacja projektu jak dla prac inżynierskich (jeśli potrzeba),
@@ -133,7 +136,7 @@ W pracy należy stosować jeden z trzech systemów cytowań (Vancouver System, H
 Każdy element pływający jak: obrazek, schemat, tabela czy fragment z~kodem źródłowym powinien zostać odpowiednio oznaczony (ponumerowany) i~zatytułowany. W~pracy powinno znaleźć się co najmniej jedno odwołanie do wspomnianego elementu, w~innym wypadku sprawia to wrażenie, iż element jest zbędny. Dodatkowo należy pamiętać, iż zasady umieszczania elementów pływających w~tekście ograniczają znacząco jaką część strony mogą zawierać, a~co za tym idzie omawiana tabelka, obrazek nie muszą znajdować się w~bezpośrednim sąsiedztwie tekstu odnoszącego się do obiektu.
 
 \section{Specyfika pracy magisterskiej}
-Większość z Państwa ma już za sobą pracę inżynierską lub licencjacką więc wiecie w jaki sposób powinna wyglądać praca. Dość istotną kwestią są różnice pomiędzy pracą magisterską a inżynierską/licencjacką. Proszę pamiętać, że praca magisterska jest rodzajem pracy badawczej, a co za tym idzie aspektowi badawczemu powinniście poświęcić maksimum uwagi. Z tego powodu należy zacząć od tak zwanej tezy. Teza pracy jest pewnego rodzaju założeniem wstępnym, którego prawdziwość bądź błędność powinniście wykazać. Dla przykładu teza w postaci ``Możliwość efektywnego układania kostki Rubika z wykorzystaniem sieci neuronowych'' sugeruje, że w pracy znajdziemy opis próby rozwiązania problemu układania kostki Rubika. W tym celu wykorzystane będą sieci neuronowe. W ramach pracy przebadana zostanie nie tylko możliwość rozwiązania problemu, ale również ocena skuteczności/efektywności zaproponowanej metody. W miarę możliwości proponowane rozwiązanie będzie porównane z innymi podejściami do tego samego problemu. Proszę pamiętać, że kod programistyczny napisany na potrzeby pracy jest tylko narzędziem a nie celem pracy. 
+Większość z Państwa ma już za sobą pracę inżynierską lub licencjacką więc wiecie w jaki sposób powinna wyglądać praca. Dość istotną kwestią są różnice pomiędzy pracą magisterską a inżynierską/licencjacką. Proszę pamiętać, że praca magisterska jest rodzajem pracy badawczej, a co za tym idzie aspektowi badawczemu powinniście poświęcić maksimum uwagi. Z tego powodu należy zacząć od tak zwanej tezy. Teza pracy jest pewnego rodzaju założeniem wstępnym, którego prawdziwość bądź błędność powinniście wykazać. Dla przykładu teza w postaci ``Możliwość efektywnego układania kostki Rubika z wykorzystaniem sieci neuronowych'' sugeruje, że w pracy znajdziemy opis próby rozwiązania problemu układania kostki Rubika. W tym celu wykorzystane będą sieci neuronowe. W ramach pracy przebadana zostanie nie tylko możliwość rozwiązania problemu, ale również ocena skuteczności/efektywności zaproponowanej metody. W miarę możliwości proponowane rozwiązanie będzie porównane z innymi podejściami do tego samego problemu. Proszę pamiętać, że kod programistyczny napisany na potrzeby pracy jest tylko narzędziem a nie celem pracy.
 
 Efekty pracy magisterskiej mogą być przedmiotem dalszych badań prowadzonych przez pracowników uczelni lub kolejnych dyplomantów. W niektórych wypadkach jest możliwość przygotowania publikacji naukowej opartej o pracę magisterską. Należy dodać, że praca magisterska może być pracą typu pilotażowego. A co za tym idzie, w odróżnieniu do wielu prac naukowych, może w efekcie dać odpowiedź negatywną, to znaczy stwierdzenie: ``teza wstępna niestety była niesłuszna i wspomniane w niej podejście nie może stanowić rozwiązania zadanego problemu''.
 
@@ -244,8 +247,7 @@ W trakcie, jak i po zakończeniu, odpowiedzi na pytanie członkowie komisji mog�
 \bibitem{IO} Ian Sommerville, Software Engineering, 10h ed., Pearsons  (2016)\\
  wydanie polskie Ian Sommerville, Inżynieria Oprogramowania, WNT (2003)
 
-\bibitem{UML} Pascal Roques, UML in Practice: The Art of Modeling Software Systems Demonstrated through Worked Examples and Solutions, John Wiley \& Sons, 2004\\
-    Przykładowy rozdział książki dotyczący wybranych diagramów UML i przypadków użycia \url{https://people.ok.ubc.ca/bowenhui/310/8-UML.pdf}
+\bibitem{UML} Pascal Roques, UML in Practice: The Art of Modeling Software Systems Demonstrated through Worked Examples and Solutions, John Wiley \& Sons, 2004\footnote{Przykładowy rozdział książki dotyczący wybranych diagramów UML i przypadków użycia \url{https://people.ok.ubc.ca/bowenhui/310/8-UML.pdf}}
 
 \bibitem{plantUML} Strona domowa projektu PlantUML \url{https://plantuml.com}
 
