@@ -34,7 +34,7 @@
 \usepackage{etoolbox}
 
 
-\geometry{lmargin=25mm, rmargin=25mm, tmargin=20mm, bmargin=20mm, foot=15mm, head=15mm, bindingoffset=10mm}
+\geometry{lmargin=25mm, rmargin=25mm, tmargin=25mm, bmargin=25mm, foot=25mm, head=25mm, bindingoffset=10mm}
 
 \def\autor#1   {\gdef\@autor{#1}}
 \def\tytul#1   {\gdef\@tytul{#1}}
