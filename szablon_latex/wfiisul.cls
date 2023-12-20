@@ -32,9 +32,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{ifthen}
 \usepackage{etoolbox}
+\usepackage{afterpage}
 
 
-\geometry{lmargin=25mm, rmargin=25mm, tmargin=25mm, bmargin=25mm, foot=25mm, head=25mm, bindingoffset=10mm}
+\geometry{lmargin=25mm, rmargin=25mm, tmargin=25mm, bmargin=25mm, foot=12.5mm, head=1.25mm, bindingoffset=10mm}
 
 \def\autor#1   {\gdef\@autor{#1}}
 \def\tytul#1   {\gdef\@tytul{#1}}
@@ -70,12 +71,15 @@
 
 \newcommand{\stronatytulowa}{%
 
+\afterpage{%
+\newgeometry{lmargin=25mm, rmargin=25mm, tmargin=25mm, bmargin=-5mm,  bindingoffset=10mm}
+
 \pagestyle{empty}
 
 \newpage \titlepage
 \begin{center}
 
-\vspace*{1.5cm}
+\vspace*{.6cm}
 %logo uniwersytetu
 \includegraphics[width=12cm]{wfiislogoul.jpg}
 
@@ -104,7 +108,7 @@ Numer albumu: \@nralbumu \\
 
 \vspace*{1cm}
 \begin{flushright}
-\begin{minipage}{0.44\textwidth}
+\begin{minipage}{0.55\textwidth}
 \begin{flushleft} \large
 %\emph{ } \\
 {\bf Praca\,\@typpracy}
@@ -122,9 +126,14 @@ WFiIS~UŁ
 \end{minipage}
 \end{flushright}
 
+
 \vspace{\fill}
 {\large Łódź \the\year}\\[4cm] % Date
 \end{center}
+% material for this page
+\clearpage
+\restoregeometry
+}
 \cleardoublepage
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \tableofcontents
