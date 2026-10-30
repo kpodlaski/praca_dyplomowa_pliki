@@ -129,8 +129,24 @@ Nie ma ogólnych założeń co do podziału logicznego pracy, przykładowy podzi
 
 \subsection{Odwołania}
 
+W pracy dyplomowej pojawia się wiele elementów niebędących tekstem (obrazki, tabele, wzory, etc.). Wszystkie te elementy powinny mieć odpowiednie odniesienie w tekście. W innym wypadku są one ,,zbędne'' i nie mają powiązania z tekstem pracy. Z tego powodu wszystkie elementy dodatkowe powinny być odpowiednio numerowane, większość na swoją nazwę (podpis) obrazującą czego dotyczą. W tekście odwołujemy się do nich zwykle przez ich numer. Przykładowe zdania: 
+\begin{itemize}
+\item Tabela \ref{Opis_Klasy} zawiera szczegółowy opis wspomnianej metody.
+\item Metoda paymentOut jest wykorzystywana do wykonywania operacji wpłaty na konto (Tab. \ref{Opis_Klasy})
+\end{itemize}
+
+
 \subsubsection{Bibliograficzne}
 Najpopularniejsze są trzy systemy cytowań (Vancouver System, Harvard System, Oxford System) opisane szczegółowo w \cite{Cytowanie}, {\bf regulamin dyplomowania WFiIS nakazuje jednoznacznie  wykorzystanie w pracy dyplomowej systemu \underline{Vancouver}}. W~przypadku systemów Vancouver i Oxford bibliografia powinna być posortowana w kolejności pojawiania się odwołań w tekście, natomiast w systemie Harvard alfabetycznie wedle nazwisk pierwszych autorów.
+
+\subsection{Wory matematyczne}
+Wzory matematyczne wstawiamy jako elementy specjalne. W zależności od technologii, w Wordzie mamy do tego odpowiedni edytor wzorów, w latex środowisko wzorów equation i jego pochodne. Wzory na przykład \eqref{wzor1} numerujemy, numer wzoru podajemy z prawej strony w nawiasie okrągłym. W ten sam sposób odnosimy się do wzoru w tekście, poprzez numer wzoru w nawiasie okrągłym.
+
+\begin{equation}
+\label{wzor1}
+\text{MSE} = \frac{1}{N}\sum_{i=1}^{N-1} (x_i - \bar{x}_i)^2  
+\end{equation}
+
 
 \subsubsection{Elementy pływające}
 Każdy element pływający jak: obrazek, schemat, tabela czy fragment z~kodem źródłowym powinien zostać odpowiednio oznaczony (ponumerowany) i~zatytułowany. W~pracy powinno znaleźć się co najmniej jedno odwołanie do wspomnianego elementu, w~innym wypadku sprawia to wrażenie, iż element jest zbędny. Dodatkowo należy pamiętać, iż zasady umieszczania elementów pływających w~tekście ograniczają znacząco jaką część strony mogą zawierać, a~co za tym idzie omawiana tabelka, obrazek nie muszą znajdować się w~bezpośrednim sąsiedztwie tekstu odnoszącego się do obiektu.
